@@ -1,4 +1,5 @@
 body{
+    /* position: fixed; */
     padding: 0;
     margin: 0;
     display: flex;
@@ -6,69 +7,32 @@ body{
     align-items: center;
     min-height: 110vh;
     user-select: none;
-    /* background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
-    /* background-image: linear-gradient( to bottom right, rgba(79,51,176,1.0),rgba(210,53,165)); */
+    background-color: rgb(186, 180, 180);
 }
-.main-content{
-    background-color: #071115;
-    color: white;
-    font-family: sans-serif;
-    font-size: x-large;
-    text-align: center;
-    position: fixed;
-    align-self: flex-start;
-    width: 100%;
-    display: flex;
-    padding: 10px 20px 10px 20px;
-    flex-direction: column;
-    /* box-shadow: 13px 13px 20px #6d7073; */
-    box-shadow: 13px 13px 20px #6d7073;
+body::-webkit-scrollbar {
+    display: none; 
 }
+
 .container{
     margin-left: 1.8em;
     padding: 25px;
     border-radius: 11px;
-    /* background-color: white; */
-    background-color: #000000;
-    /* background-color: black; */
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffff;
+    /* background-color: #ffffff; */
+    background: #33ccff;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #c6c8c8, 
+                inset -5px -5px 8px #828383;
+
 }
-.theme-toggler {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: 60px;
-    right: 30px;
-    color: black;
-    cursor: pointer;
-    z-index: 1;
-}
+
 label{
     display: flex;
+    
     align-items: center;
     color: white; 
     position: absolute; 
     right: 30px; 
     font-size: larger;
-}
-.theme-toggler.active {
-    color: rgb(0, 0, 0);
-}
-
-.theme-toggler.active::before {
-    background-color: rgb(255, 255, 255);
-}
-
-.theme-toggler::before {
-    content: '';
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    z-index: -1;
 }
 .row button{
     width: 60px;
@@ -78,13 +42,15 @@ label{
     outline: none;
     margin: 5px;
     border-radius: 4px;
-    transition: 1s;
+    transition: 0.5s;
+    /* box-shadow: inset 5px 5px 8px #9da2a2, 
+                inset -3px -3px 8px #828383; */
     box-shadow: 5px 5px 8px #00000020, 
     inset -5px -5px 8px #ffff;
 }
 .row button:hover{
     box-shadow: inset 5px 5px 8px rgba(31, 26, 26, 0.1), 
-                inset -5px -5px 8px #fff;
+                inset -7px -7px 8px #fff;
     background: #fff;
 }
 .display #screen{
@@ -99,13 +65,13 @@ label{
     background-color: white;
     border-radius: 6px;
     box-shadow: inset 8px 8px 8px #cbced1, 
-                inset -8px -8px 8px #ffffff;
+                inset -8px -8px 8px #dfdede;
 }
 #eval{
     background: #33ccff;
     color: #fff;
-    /* box-shadow: inset 5px 5px 8px #66d9ff, 
-                inset -5px -5px 8px #00ace6; */
+    box-shadow: inset 5px 5px 8px #66d9ff, 
+                inset -5px -5px 8px #00ace6;
 }
 #eval:hover{
     box-shadow: inset 5px 5px 8px #027aa1, 
@@ -114,32 +80,31 @@ label{
 #ac{
     background: #266ec5;
     color: #fff;
+    box-shadow: inset 5px 5px 8px #74d5f5, 
+                inset -5px -5px 8px #266ec5;
 }
 #ac:hover {
     box-shadow: inset 5px 5px 8px #2e57b8, 
                 inset -5px -5px 8px #6576c4;
 }
 #ce {
-    background: #ff3333;
+    background: #ed0e0e;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #ff6666, 
+                inset -5px -5px 8px #ff3333;
     color: #fff;
 }
 
 #ce:hover {
-    box-shadow: inset 5px 5px 8px #e60000,inset -5px -5px 8px #df4949 ;
+    box-shadow: inset 5px 5px 8px #d70404,inset -5px -5px 8px #d13838;
 }
 @media(min-width: 568px){
     .container{
         margin-left: 1.8em;
         padding: 25px;
         border-radius: 11px;
-        /* background-color: white; */
-        box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffff;
+        background-color: white;
     }
 }
 
 /* dark theme */
-
-.container.dark {
-    background-color: #ffffff;
-  }
-  
