@@ -1,9 +1,11 @@
 var screen=document.querySelector('#screen');
 var btn=document.querySelectorAll('.btn');
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
 /*============ For getting the value of btn, Here we use for loop ============*/
 for(item of btn)
 {
     item.addEventListener('click',(e)=>{
+        audio.play();
         btntext=e.target.innerText;
 
         if(btntext =='*')
@@ -79,13 +81,3 @@ function backspc()
 {
     screen.value=screen.value.substr(0,screen.value.length-1);
 }
-
-const themeToggleBtn = document.querySelector(".theme-toggler");
-const container = document.querySelector(".container");
-const toggleIcon = document.querySelector(".toggler-icon");
-let isDark = true;
-themeToggleBtn.onclick = () => {
-  container.classList.toggle("dark");
-  themeToggleBtn.classList.toggle("active");
-  isDark = !isDark;
-};
